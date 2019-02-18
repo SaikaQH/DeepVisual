@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!-- 连接 fx:controller 后会在调试的时候报错
+     提示 ClassNotFound，未查明原因，可能JVM有问题？
+     暂时先通过查找 ID 获取部件并对应添加事件的方式实现部件动作 -->
+
+<TabPane fx:id="mainTabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@stylesheets.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DeepVisual.UInterface.DeepVisualWindowController">
+   <tabs>
+      <Tab closable="false" text="    Datasets    ">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Rectangle fx:id="selectRec" fill="#5ba5ff" height="120.0" layoutX="209.0" layoutY="469.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="248.0" />
+                  <Rectangle fx:id="selectBackgroundColor" fill="WHITE" height="100.0" layoutX="219.0" layoutY="479.0" smooth="false" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="228.0" />
+                  <Button fx:id="cifar10_dataset_btn" layoutX="219.0" layoutY="139.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="228.0" text="CIFAR10 small image classification" textAlignment="CENTER" />
+                  <Button fx:id="cifar100_dataset_btn" layoutX="489.0" layoutY="139.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="228.0" text="CIFAR100 small image classification" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="imdb_dataset_btn" layoutX="759.0" layoutY="139.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="228.0" text="IMDB Movie review sentiment classification" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="reuters_dataset_btn" layoutX="219.0" layoutY="307.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="228.0" text="Reuters newswire topics classification" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="mnist_dataset_btn" layoutX="489.0" layoutY="309.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="228.0" text="MNIST database of handwritten digits" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="fashion_mnist_dataset_btn" layoutX="759.0" layoutY="307.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="228.0" text="Fashion-MNIST database of fashion articles" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="boston_housing_dataset_btn" layoutX="219.0" layoutY="479.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="228.0" text="Boston housing price regression dataset" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="other_dataset_btn" layoutX="759.0" layoutY="479.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="228.0" text="Other" textAlignment="CENTER" wrapText="true" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab closable="false" text="Neural Network Builder">
+         <content>
+            <AnchorPane> <!--添加到AnchorPane中： fx:controller="DeepVisual.UInterface.DeepVisualWindowControllerer" -->
+               <children>
+                  <SplitPane dividerPositions="0.798836242726517" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="813.0" prefWidth="1205.0">
+                    <items>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Pane fx:id="NNDrawerPane" focusTraversable="true" prefHeight="200.0" prefWidth="200.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                               <children>
+                                   <Rectangle fx:id="NNDbackground" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="811.0" stroke="TRANSPARENT" strokeType="INSIDE" width="958.0" />
+                                    <Button fx:id="shadowBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" visible="false" />
+                               </children></Pane>
+                           </children>
+                        </GridPane>
+                        <SplitPane dividerPositions="0.6041923551171393" orientation="VERTICAL" prefHeight="811.0" prefWidth="238.0">
+                          <items>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER">
+                                 <content>
+                                    <VBox fx:id="LayerPane" maxHeight="-Infinity" minHeight="-Infinity" />
+                                 </content>
+                              </ScrollPane>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER">
+                                 <content>
+                                    <VBox maxHeight="1.7976931348623157E308" minHeight="-Infinity">
+                                       <children>
+                                          <TableView fx:id="AttributePane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                              <TableColumn fx:id="AttributeColumn" editable="false" maxWidth="129.0" minWidth="113.0" prefWidth="113.0" sortable="false" text="Attribute" />
+                                              <TableColumn fx:id="ValueColumn" editable="false" maxWidth="1.7976931348623157E308" minWidth="108.0" prefWidth="124.0" sortable="false" text="Value" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                          </items>
+                        </SplitPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="compile &amp; fit">
+         <content>
+            <SplitPane dividerPositions="0.0024896265560165973, 0.5269709543568465" prefHeight="200.0" prefWidth="160.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" visible="false">
+                     <children>
+                        <Rectangle fx:id="toNNPaneBtn_2" arcHeight="5.0" arcWidth="5.0" fill="#d4eaff" height="182.0" layoutX="347.0" layoutY="72.0" stroke="#0000002f" strokeType="INSIDE" visible="false" width="133.0" />
+                        <Rectangle fx:id="toNNPaneBtn_1" arcHeight="5.0" arcWidth="5.0" fill="#afd8ff" height="188.0" layoutX="330.0" layoutY="85.0" stroke="#0000002f" strokeType="INSIDE" visible="false" width="136.0" />
+                        <Text fx:id="toNNPaneText_1" layoutX="360.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Neural" visible="false">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="toNNPaneText_2" layoutX="350.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Network" visible="false">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <Rectangle fx:id="CompileFuncBtn" arcHeight="5.0" arcWidth="5.0" fill="#ffe170" height="96.0" layoutX="302.0" layoutY="371.0" stroke="#0000002e" strokeType="INSIDE" visible="false" width="190.0" />
+                        <Text fx:id="CompileFuncText" layoutX="351.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compile" visible="false">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <Circle fx:id="FitFuncBtn" fill="#ff8080fc" layoutX="397.0" layoutY="634.0" radius="55.0" stroke="#0000002f" strokeType="INSIDE" visible="false" />
+                        <Text fx:id="FitFuncText" layoutX="379.0" layoutY="640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="f i t" visible="false">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <Line endY="68.0" layoutX="398.0" layoutY="303.0" startY="-30.0" visible="false">
+                           <stroke>
+                              <LinearGradient endX="0.5142857142857142" endY="1.0" startX="0.5047619047619047">
+                                 <stops>
+                                    <Stop color="#0733f5cb" />
+                                    <Stop color="#ffc300" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </stroke></Line>
+                        <Line endY="69.0" layoutX="398.0" layoutY="510.0" startY="-43.0" visible="false">
+                           <stroke>
+                              <LinearGradient endX="0.5142857142857142" endY="1.0" startX="0.5047619047619047">
+                                 <stops>
+                                    <Stop color="#ffc300" />
+                                    <Stop color="RED" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </stroke>
+                        </Line>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <ScrollPane prefHeight="813.0" prefWidth="630.0">
+                           <content>
+                              <VBox prefHeight="810.0" prefWidth="628.0">
+                                 <children>
+                                    <TableView fx:id="CFAttrPane" prefHeight="810.0" prefWidth="626.0">
+                                      <columns>
+                                        <TableColumn fx:id="CFAttrColumn" prefWidth="312.0" text="Attribute" />
+                                        <TableColumn fx:id="CFValueColumn" prefWidth="315.0" text="Value" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <ScrollPane prefHeight="814.0" prefWidth="563.0">
+                          <content>
+                              <VBox>
+                                 <children>
+                                    <TableView fx:id="CFAAttrPane" prefHeight="809.0" prefWidth="560.0">
+                                      <columns>
+                                        <TableColumn fx:id="CFAAttrColumn" prefWidth="268.0" text="Attribute" />
+                                        <TableColumn fx:id="CFAValueColumn" prefWidth="291.0" text="Value" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="        Code         ">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane prefHeight="813.0" prefWidth="1204.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                    </rowConstraints>
+                     <children>
+                        <ScrollPane prefHeight="816.0" prefWidth="1205.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                           <content>
+                              <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="810.0" prefWidth="1202.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                </rowConstraints>
+                                 <children>
+                                    <TextArea fx:id="CodePane" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Monospaced Regular" size="12.0" />
+                                       </font></TextArea>
+                                    <MenuBar>
+                                      <menus>
+                                        <Menu mnemonicParsing="false" text="File">
+                                          <items>
+                                            <MenuItem fx:id="ExportMenuItem" mnemonicParsing="false" text="Export as Python file" />
+                                                <MenuItem fx:id="ImportMenuItem" mnemonicParsing="false" text="Import from keras file" />
+                                          </items>
+                                        </Menu>
+                                        <Menu mnemonicParsing="false" text="Edit">
+                                          <items>
+                                            <MenuItem fx:id="RemoveAllMenuItem" mnemonicParsing="false" text="Delete all" />
+                                          </items>
+                                        </Menu>
+                                      </menus>
+                                    </MenuBar>
+                                 </children>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="PluginSettingSubTab" text="Plugin settings">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="150.0" layoutY="137.0" text="Output File:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="107.0" layoutY="185.0" text="Keras Runner Path:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="OutputFilePathTxfd" layoutX="236.0" layoutY="135.0" prefHeight="22.0" prefWidth="757.0" />
+                  <TextField fx:id="KerasRunnerPathTxfd" layoutX="236.0" layoutY="183.0" prefHeight="22.0" prefWidth="757.0" />
+                  <Button fx:id="OutputFileSelectBtn" layoutX="1002.0" layoutY="135.0" mnemonicParsing="false" text="Select" />
+                  <Button fx:id="KerasRunnerSelectBtn" layoutX="1002.0" layoutY="183.0" mnemonicParsing="false" text="Select" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>

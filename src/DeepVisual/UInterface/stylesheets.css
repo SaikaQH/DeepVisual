@@ -1,0 +1,325 @@
+.DatasetButton {
+    -fx-border-width: 1px;
+    -fx-border-color: grey;
+    -fx-background-insets: 1 1 1 1;  // top right buttom left
+    -fx-background-color: snow;
+    -fx-background-radius: 0;
+}
+
+.DatasetButton:hover {
+    -fx-opacity: 0.7;
+}
+
+.NNBuilderButton {
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-width: 1px;
+    -fx-border-color: grey;
+    -fx-background-insets: 1 1 1 1;  // top right buttom left
+}
+
+.NNBuilderButton:hover {
+    -fx-opacity: 0.7;
+    -fx-border-width: 2px;
+    -fx-border-color: lightskyblue;
+}
+
+.NNBuilderButton:focused {
+    -fx-border-width: 3px;
+    -fx-border-color: deepskyblue;
+}
+
+.LayerPaneButton {
+    -fx-border-width: 1px;
+    -fx-border-color: snow;
+    -fx-background-insets: 1 1 1 1;  // top right buttom left
+}
+
+.LayerPaneButton.ParentLayer {
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 2 2 2 2;  // top right buttom left
+    -fx-border-color: linear-gradient(to right, grey, snow);
+    -fx-alignment: center-left;
+}
+
+.LayerPaneButton.ChildLayer {
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+}
+
+.LayerPaneButton.ChildLayer:hover {
+    -fx-border-width: 3px;
+    -fx-border-color: deepskyblue;
+}
+
+// ================================================ single layer ====================================================
+.dragBtn {
+    -fx-background-color: lightskyblue;
+    -fx-opacity: 0.3;
+}
+
+// ------------------------------------------------- Core ---------------------------------------------------------
+.Core.CoreLayerButton {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, lightskyblue 0%, snow 100%);
+}
+
+.Input {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, lightskyblue 0%, snow 80%, lightgray 100%);
+}
+
+.Dense {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, lightskyblue 0%, snow 80%, aquamarine 100%);
+}
+
+.Activation {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, lightskyblue 0%, snow 80%, lightcoral 100%);
+}
+
+.Dropout {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, lightskyblue 0%, snow 80%, lightgreen 100%);
+}
+
+.Flatten {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, lightskyblue 0%, snow 80%, khaki 100%);
+}
+
+.Reshape {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, lightskyblue 0%, snow 80%, lime 100%);
+}
+
+// ------------------------------------------------- Convolutional --------------------------------------------------------
+.Convolutional.ConvolutionalLayerButton {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 100%);
+}
+
+.Conv1D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, tomato 100%);
+}
+
+.Conv2D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, orangered 100%);
+}
+
+.SeparableConv1D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, mediumorchid 100%);
+}
+
+.SeparableConv2D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, mediumpurple 100%);
+}
+
+.Conv2DTranspose {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, red 100%);
+}
+
+.Conv3D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, maroon 100%);
+}
+
+.Cropping1D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, lime 100%);
+}
+
+.Cropping2D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, mediumseagreen 100%);
+}
+
+.Cropping3D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, olive 100%);
+}
+
+.UpSampling1D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, khaki 100%);
+}
+
+.UpSampling2D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, gold 100%);
+}
+
+.UpSampling3D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, goldenrod 100%);
+}
+
+.ZeroPadding1D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, pink 100%);
+}
+
+.ZeroPadding2D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, palevioletred 100%);
+}
+
+.ZeroPadding3D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, orange 0%, snow 80%, orchid 100%);
+}
+
+// --------------------------------------- Pooling --------------------------------------------
+.Pooling.PoolingLayerButton {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 100%);
+}
+
+.MaxPooling1D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 80%, tomato 100%);
+}
+
+.MaxPooling2D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 80%, orangered 100%);
+}
+
+.MaxPooling3D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 80%, maroon 100%);
+}
+
+.AveragePooling1D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 80%, lime 100%);
+}
+
+.AveragePooling2D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 80%, mediumseagreen 100%);
+}
+
+.AveragePooling3D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 80%, olive 100%);
+}
+
+.GlobalMaxPooling1D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 80%, khaki 100%);
+}
+
+.GlobalMaxPooling2D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 80%, gold 100%);
+}
+
+.GlobalMaxPooling3D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 80%, goldenrod 100%);
+}
+
+.GlobalAveragePooling1D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 80%, pink 100%);
+}
+
+.GlobalAveragePooling2D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 80%, palevioletred 100%);
+}
+
+.GlobalAveragePooling3D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, limegreen 0%, snow 80%, orchid 100%);
+}
+
+// --------------------------------------- Locally-Connected --------------------------------------------
+.LocallyConnected.LocallyConnectedLayerButton {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, sandybrown 0%, snow 100%);
+}
+
+.LocallyConnected1D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, sandybrown 0%, snow 80%, tomato 100%);
+}
+
+.LocallyConnected2D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, sandybrown 0%, snow 80%, orangered 100%);
+}
+
+// --------------------------------------- Recurrent --------------------------------------------
+.Recurrent.RecurrentLayerButton {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, plum 0%, snow 100%);
+}
+
+.SimpleRNN {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, plum 0%, snow 80%, mediumseagreen 100%);
+}
+
+.GRU {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, plum 0%, snow 80%, dodgerblue 100%);
+}
+
+.LSTM {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, plum 0%, snow 80%, gold 100%);
+}
+
+.ConvLSTM2D {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, plum 0%, snow 80%, goldenrod 100%);
+}
+
+.SimpleRNNCell {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, plum 0%, snow 80%, lightseagreen 100%);
+}
+
+.GRUCell {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, plum 0%, snow 80%, deepskyblue 100%);
+}
+
+.LSTMCell {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, plum 0%, snow 80%, khaki 100%);
+}
+
+.CuDNNGRU {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, plum 0%, snow 80%, lightskyblue 100%);
+}
+
+.CuDNNLSTM {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, plum 0%, snow 80%, darkorange 100%);
+}
+
+// --------------------------------------- Embedding --------------------------------------------
+.Embedding.EmbeddingLayerButton {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, dodgerblue 0%, snow 100%);
+}
+
+.Embedding {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, dodgerblue 0%, snow 80%, dodgerblue 100%);
+}
+
+// --------------------------------------- Advanced Activations --------------------------------------------
+.AdvancedActivations.AdvancedActivationsLayerButton {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, gold 0%, snow 100%);
+}
+
+.LeakyReLU {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, gold 0%, snow 80%, lawngreen 100%);
+}
+
+.PReLU {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, gold 0%, snow 80%, mediumpurple 100%);
+}
+
+.ELU {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, gold 0%, snow 80%, lightcyan 100%);
+}
+
+.ThresholdedReLU {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, gold 0%, snow 80%, lightskyblue 100%);
+}
+
+.Softmax {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, gold 0%, snow 80%, mistyrose 100%);
+}
+
+.ReLU {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, gold 0%, snow 80%, red 100%);
+}
+
+// --------------------------------------- Normalization --------------------------------------------
+.Normalization.NormalizationLayerButton {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, ivory 0%, snow 100%);
+}
+
+.BatchNormalization {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, ivory 0%, snow 80%, gray 100%);
+}
+
+// --------------------------------------- Noise --------------------------------------------
+.Noise.NoiseLayerButton {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, silver 0%, snow 100%);
+}
+
+.GaussianNoise {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, silver 0%, snow 80%, lightsteelblue 100%);
+}
+
+.GaussianDropout {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, silver 0%, snow 80%, gainsboro 100%);
+}
+
+.AlphaDropout {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, silver 0%, snow 80%, lemonchiffon 100%);
+}

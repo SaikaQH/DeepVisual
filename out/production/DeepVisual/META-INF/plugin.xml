@@ -1,0 +1,45 @@
+<idea-plugin>
+  <id>com.QH.DeepVisual</id>
+  <name>DeepVisual</name>
+  <version>1.0</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">Zhao Lab</vendor>
+
+  <description><![CDATA[
+      A graphical user interface (GUI) programming tool for deep learning<br>
+      <em></em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products  -->
+  <depends>com.intellij.modules.python</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <project-components>
+    <component>
+      <implementation-class>DeepVisual.UInterface.DeepVisualWindow</implementation-class>
+    </component>
+  </project-components>
+
+  <actions>
+    <action class="DeepVisual.actions.DeepVisualWindowAction"
+            id="DeepVisual.actions.DeepVisual"
+            popup="true"
+            text="DeepVisual" description="It's a GUI plugin which will help you create your own neural network program.">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>
