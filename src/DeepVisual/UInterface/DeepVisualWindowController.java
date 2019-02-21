@@ -50,11 +50,11 @@ public class DeepVisualWindowController {
     private TabPane mainTabPane;
 
     // 初始化窗口的各项元素
-    public void initNNDrawer() {
+    public void initNNBuilder() {
         initImport();
 
         initDatasetsButton();
-        initNeuralNetworkDrawerPane();
+        initNeuralNetworkBuilderPane();
         initCompileAndFitPane();
         initCodePane();
         initSettingsPane();
@@ -482,9 +482,9 @@ public class DeepVisualWindowController {
     }
 
     // --------------------------------------------------- 网络绘制窗口（Tab 2）----------------------------------------------------
-    private void initNeuralNetworkDrawerPane() {
+    private void initNeuralNetworkBuilderPane() {
         initLayerPane();
-        initNNDrawerPane();
+        initNNBuilderPane();
         initAttributePane();
     }
     // --------------------------------------------------- 按钮窗口（位置右上）-----------------------------------------------------
@@ -525,7 +525,7 @@ public class DeepVisualWindowController {
 
     // ------------------------------------------------- 绘图窗口（位置左侧）-------------------------------------------------------
     @FXML
-    private Pane NNDrawerPane;
+    private Pane NNBuilderPane;
     @FXML
     private Rectangle NNDbackground;
 
@@ -624,8 +624,8 @@ public class DeepVisualWindowController {
     protected MenuItem NNimport_btn;
     protected final double cmenu_width = 150.0;
 
-    private void initNNDrawerPane() {
-        addNNDrawerPaneDragDropEvent();
+    private void initNNBuilderPane() {
+        addNNBuilderPaneDragDropEvent();
 
         total_Input = 0;
         total_Dense = 0;
@@ -698,7 +698,7 @@ public class DeepVisualWindowController {
 
         drag_button = new NNBuilderButton(0.5);
         drag_button.setVisible(false);
-        NNDrawerPane.getChildren().add(drag_button);
+        NNBuilderPane.getChildren().add(drag_button);
         drag_button.getStyleClass().add("dragBtn");
 
         shadowBtn.setVisible(false);
@@ -707,13 +707,13 @@ public class DeepVisualWindowController {
 
         drag_cline = new connectLine(0.5);
         drag_cline.setCLineVisible(false);
-        NNDrawerPane.getChildren().add(drag_cline);
-        NNDrawerPane.getChildren().add(drag_cline.getCLineArrow());
+        NNBuilderPane.getChildren().add(drag_cline);
+        NNBuilderPane.getChildren().add(drag_cline.getCLineArrow());
 
-        initNNDrawerPaneContextMenu();
+        initNNBuilderPaneContextMenu();
     }
 
-    private void initNNDrawerPaneContextMenu() {  // 初始化右键菜单
+    private void initNNBuilderPaneContextMenu() {  // 初始化右键菜单
         NNDpane_cmenu = new ContextMenu();
         NNDpane_cmenu.setPrefWidth(cmenu_width);
         NNDpane_cmenu.setMinWidth(USE_PREF_SIZE);
@@ -740,31 +740,31 @@ public class DeepVisualWindowController {
         NNDbackground.setOnContextMenuRequested(new EventHandler<ContextMenuEvent>() {
             @Override
             public void handle(ContextMenuEvent event) {
-                NNDpane_cmenu.show(NNDrawerPane, event.getScreenX(), event.getScreenY());
+                NNDpane_cmenu.show(NNBuilderPane, event.getScreenX(), event.getScreenY());
             }
         });
     }
 
-    private void addNNDrawerPaneDragDropEvent() {
-        NNDrawerPane.setOnDragEntered(new EventHandler<DragEvent>() {
+    private void addNNBuilderPaneDragDropEvent() {
+        NNBuilderPane.setOnDragEntered(new EventHandler<DragEvent>() {
             @Override
             public void handle(DragEvent event) {
                 //System.out.println("drag entered");
             }
         });
 
-        NNDrawerPane.setOnDragExited(new EventHandler<DragEvent>() {
+        NNBuilderPane.setOnDragExited(new EventHandler<DragEvent>() {
             @Override
             public void handle(DragEvent event) {
                 //System.out.println("drag exited");
             }
         });
 
-        NNDrawerPane.setOnDragOver(new EventHandler<DragEvent>() {
+        NNBuilderPane.setOnDragOver(new EventHandler<DragEvent>() {
             @Override
             public void handle(DragEvent event) {
                 //System.out.println(event.getGestureSource().getClass());
-                if(event.getGestureSource() != NNDrawerPane  /* 拖拽 不来自自己 */
+                if(event.getGestureSource() != NNBuilderPane  /* 拖拽 不来自自己 */
                         && event.getGestureSource().getClass().getSuperclass().getSuperclass() == new LayerPaneButton().getClass()  /* 拖拽 来自LayerPaneButton */
                         && event.getDragboard().hasString()) {  /* 剪贴板中有String */
                     //System.out.println("drag over");
@@ -776,7 +776,7 @@ public class DeepVisualWindowController {
                     shadowBtn.setLayoutX((int)(event.getX() / nnd_btn_gap) * nnd_btn_gap - 50);
                     shadowBtn.setLayoutY((int)(event.getY() / nnd_btn_gap) * nnd_btn_gap - 25);
                 }
-                else if(event.getGestureSource() != NNDrawerPane  /* 拖拽 不来自自己 */
+                else if(event.getGestureSource() != NNBuilderPane  /* 拖拽 不来自自己 */
                         && event.getGestureSource().getClass() == new sideButton().getClass()  /* 拖拽 来自边界按钮 */
                         && event.getDragboard().hasString()) {  /* 剪贴板中有String */
                     //System.out.println("drag over");
@@ -787,7 +787,7 @@ public class DeepVisualWindowController {
                     temp_cline_e_y = event.getY();
                     drag_cline.drawDragConnectLine(temp_cline_s_x, temp_cline_s_y, temp_cline_e_x, temp_cline_e_y);
                 }
-                else if(event.getGestureSource() != NNDrawerPane  /* 拖拽 不来自自己 */
+                else if(event.getGestureSource() != NNBuilderPane  /* 拖拽 不来自自己 */
                         && event.getGestureSource().getClass().getSuperclass().getSuperclass() == new NNBuilderButton().getClass()  /* 拖拽 来自绘图页面的按钮 */
                         && event.getDragboard().hasString()) {  /* 剪贴板中有String */
                     event.acceptTransferModes(TransferMode.COPY_OR_MOVE);
@@ -799,7 +799,7 @@ public class DeepVisualWindowController {
             }
         });
 
-        NNDrawerPane.setOnDragDropped(new EventHandler<DragEvent>() {
+        NNBuilderPane.setOnDragDropped(new EventHandler<DragEvent>() {
             @Override
             public void handle(DragEvent event) {
                 //System.out.println("drag dropped");
@@ -913,8 +913,8 @@ public class DeepVisualWindowController {
     }
 
     public void addNNBtn(NNBuilderButton NNBtn) {
-        NNDrawerPane.getChildren().add(1, NNBtn);  // 将按钮置于根节点下最上方，在显示时就会置于最底层
-        NNDrawerPane.getChildren().addAll(NNBtn.getSideBtnList());  // 自然添加边界按钮，自动置于根节点最下方，在显示时会置于最顶层，不会被其他部件遮挡
+        NNBuilderPane.getChildren().add(1, NNBtn);  // 将按钮置于根节点下最上方，在显示时就会置于最底层
+        NNBuilderPane.getChildren().addAll(NNBtn.getSideBtnList());  // 自然添加边界按钮，自动置于根节点最下方，在显示时会置于最顶层，不会被其他部件遮挡
                                                                     // 注意之后的连线的放置位置
         addNNBtnToList(NNBtn);
         addNNBtnToCode(NNBtn);
@@ -922,8 +922,8 @@ public class DeepVisualWindowController {
 
     public void removeNNBtn(NNBuilderButton NNBtn) {
         boolean has_nnbtn = false;
-        NNDrawerPane.getChildren().removeAll(NNBtn.getSideBtnList());
-        has_nnbtn = NNDrawerPane.getChildren().remove(NNBtn);
+        NNBuilderPane.getChildren().removeAll(NNBtn.getSideBtnList());
+        has_nnbtn = NNBuilderPane.getChildren().remove(NNBtn);
 
         if(has_nnbtn)
             removeNNBtnFromList(NNBtn);
@@ -974,18 +974,18 @@ public class DeepVisualWindowController {
     }
 
     public void addConnectLine(connectLine c_line) {
-        NNDrawerPane.getChildren().add(total_NN+1, c_line.getCLineDeleteBtn());
-        NNDrawerPane.getChildren().add(total_NN+1, c_line);
-        NNDrawerPane.getChildren().add(total_NN+1, c_line.getCLineArrow());
+        NNBuilderPane.getChildren().add(total_NN+1, c_line.getCLineDeleteBtn());
+        NNBuilderPane.getChildren().add(total_NN+1, c_line);
+        NNBuilderPane.getChildren().add(total_NN+1, c_line.getCLineArrow());
 
         addCLineToCode(c_line);
     }
 
     public void removeConnectLine(connectLine c_line) {
         boolean has_cline = false;
-        NNDrawerPane.getChildren().remove(c_line.getCLineArrow());
-        NNDrawerPane.getChildren().remove(c_line.getCLineDeleteBtn());
-        has_cline = NNDrawerPane.getChildren().remove(c_line);
+        NNBuilderPane.getChildren().remove(c_line.getCLineArrow());
+        NNBuilderPane.getChildren().remove(c_line.getCLineDeleteBtn());
+        has_cline = NNBuilderPane.getChildren().remove(c_line);
 
         if(has_cline)
             removeCLineFromCode(c_line);
@@ -1093,28 +1093,28 @@ public class DeepVisualWindowController {
         toNNPaneBtn_1.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                changeTabPane(_DRAWER_PANE_INDEX);
+                changeTabPane(_BUILDER_PANE_INDEX);
             }
         });
 
         toNNPaneBtn_2.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                changeTabPane(_DRAWER_PANE_INDEX);
+                changeTabPane(_BUILDER_PANE_INDEX);
             }
         });
 
         toNNPaneText_1.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                changeTabPane(_DRAWER_PANE_INDEX);
+                changeTabPane(_BUILDER_PANE_INDEX);
             }
         });
 
         toNNPaneText_2.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                changeTabPane(_DRAWER_PANE_INDEX);
+                changeTabPane(_BUILDER_PANE_INDEX);
             }
         });
 
@@ -1155,7 +1155,7 @@ public class DeepVisualWindowController {
         return fitFunc;
     }
 
-    public final int _DRAWER_PANE_INDEX = 1;
+    public final int _BUILDER_PANE_INDEX = 1;
     public final int _SETTINGS_PANE_INDEX = 4;
     public void changeTabPane(int tab_number) {
         mainTabPane.getSelectionModel().select(tab_number);
@@ -1304,13 +1304,13 @@ public class DeepVisualWindowController {
 
     public void clearAll() {
         clearDatasetPane();
-        clearNNDrawerPane();
+        clearNNBuilderPane();
         clearAttributePane();
         clearCFPane();
         clearCodePane();
     }
 
-    public void clearNNDrawerPane() {
+    public void clearNNBuilderPane() {
         total_Input = 0;
         total_Dense = 0;
         total_Activation = 0;
@@ -1381,7 +1381,7 @@ public class DeepVisualWindowController {
         NNBtn_id_num = 0;
 
         // 绘图窗口
-        NNDrawerPane.getChildren().retainAll(drag_button, drag_cline, drag_cline.getCLineArrow());
+        NNBuilderPane.getChildren().retainAll(drag_button, drag_cline, drag_cline.getCLineArrow());
     }
 
     public void clearAttributePane() {
@@ -1415,8 +1415,8 @@ public class DeepVisualWindowController {
     // =============================================================================================================================================================
 
     // --------------------------------------------------------- Settings Pane ---------------------------------------------------------------------
-    Project _project;
-    AnActionEvent _event;
+    /*Project _project;
+    //AnActionEvent _event;
 
     public void set_project(Project _project) {
         this._project = _project;
@@ -1432,7 +1432,7 @@ public class DeepVisualWindowController {
 
     public AnActionEvent get_event() {
         return _event;
-    }
+    }*/
 
     @FXML
     private TextField OutputFilePathTxfd;
@@ -1455,7 +1455,7 @@ public class DeepVisualWindowController {
             public void handle(ActionEvent event) {
                 FileChooser fileChooser = new FileChooser();
                 fileChooser.setTitle("Select Keras file");
-                fileChooser.setInitialDirectory(new File(_project.getPresentableUrl()));
+                //fileChooser.setInitialDirectory(new File(_project.getPresentableUrl()));
                 fileChooser.getExtensionFilters().addAll(
                         new FileChooser.ExtensionFilter("Python File", "*.py")
                         //new FileChooser.ExtensionFilter("All Files", "*.*")

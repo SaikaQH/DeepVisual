@@ -6,7 +6,12 @@ import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
+import com.intellij.openapi.wm.ToolWindowAnchor;
 import com.intellij.openapi.wm.ToolWindowManager;
+import com.intellij.ui.content.Content;
+import com.intellij.ui.content.ContentFactory;
+import com.intellij.ui.content.ContentManager;
+import javafx.stage.Stage;
 
 public class DeepVisualWindowAction extends AnAction {
     private ToolWindow getToolWindow(Project project) {
@@ -33,8 +38,17 @@ public class DeepVisualWindowAction extends AnAction {
         String code = psifile.getText();
         System.out.println(code);
 */
-        DeepVisualWindow deepVisualWindow = new DeepVisualWindowComponent(project, event).getDeepVisualWindowPanel();
-        ToolWindow toolWindow = getToolWindow(project);
-        toolWindow.activate(deepVisualWindow);
+        DeepVisualWindow deepVisualWindow = new DeepVisualWindow();
+        ToolWindowManager toolWindowManager = ToolWindowManager.getInstance(project);
+        toolWindowManager.unregisterToolWindow("DeepVisualWindow");
+        ToolWindow toolWindow = toolWindowManager.registerToolWindow("DeepVisualWindow", false, ToolWindowAnchor.RIGHT);
+        //toolWindowManager.setMaximized(toolWindow, true);
+        final ContentManager contentManager = toolWindow.getContentManager();
+        final Content content = contentManager.getFactory().createContent(deepVisualWindow, null, false);
+        contentManager.addContent(content);
+        /*final Content content = ContentFactory.SERVICE.getInstance().createContent(deepVisualWindow, "", false);
+        content.setCloseable(false);
+        toolWindow.getContentManager().addContent(content);
+        toolWindow.show(deepVisualWindow);*/
     }
 }

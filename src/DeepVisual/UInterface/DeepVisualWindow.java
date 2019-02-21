@@ -17,15 +17,14 @@ public class DeepVisualWindow extends JPanel implements Runnable {
     private Project _project;
     private AnActionEvent _event;
 
-    public DeepVisualWindow() {}
+    public DeepVisualWindow() {
+        add(initAndShowGUI());
+    }
 
     public DeepVisualWindow(Project project, AnActionEvent event) {
+        this();
         this._project = project;
         this._event = event;
-
-        add(initAndShowGUI());
-
-        this.isMaximumSizeSet();
     }
 
     private JFXPanel initAndShowGUI() {
@@ -34,6 +33,7 @@ public class DeepVisualWindow extends JPanel implements Runnable {
             @Override
             public void run() {
                 initFX(jfxPanel);
+                System.out.println("run 11111111111111111111111111");
             }
         });
         return jfxPanel;
@@ -56,9 +56,9 @@ public class DeepVisualWindow extends JPanel implements Runnable {
 
         // 初始化界面，通过调用 Controller 的初始化函数
         DeepVisualWindowController controller = loader.getController();
-        controller.set_project(_project);
-        controller.set_event(_event);
-        controller.initNNDrawer();
+        //controller.set_project(_project);
+        //controller.set_event(_event);
+        controller.initNNBuilder();
 
         Scene scene = new Scene(root);
         jfxPanel.setScene(scene);
@@ -66,5 +66,6 @@ public class DeepVisualWindow extends JPanel implements Runnable {
 
     public void run() {
         //
+        System.out.println("run 2222222222222222222222222");
     }
 }

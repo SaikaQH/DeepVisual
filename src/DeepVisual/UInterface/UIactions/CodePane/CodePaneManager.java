@@ -495,7 +495,7 @@ public class CodePaneManager {
             if(!output_file_path.endsWith(".py"))
                 return ;
 
-            PsiFile psiFile = _parent.get_event().getRequiredData(CommonDataKeys.PSI_FILE);
+            //PsiFile psiFile = _parent.get_event().getRequiredData(CommonDataKeys.PSI_FILE);
 
             //System.out.println(output_file_path);
 

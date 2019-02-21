@@ -64,7 +64,7 @@
                               <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Pane fx:id="NNDrawerPane" focusTraversable="true" prefHeight="200.0" prefWidth="200.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                              <Pane fx:id="NNBuilderPane" focusTraversable="true" prefHeight="200.0" prefWidth="200.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                                <children>
                                    <Rectangle fx:id="NNDbackground" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="811.0" stroke="TRANSPARENT" strokeType="INSIDE" width="958.0" />
                                     <Button fx:id="shadowBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" visible="false" />

@@ -14,8 +14,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class ImportCodeManagerWithProcess {
-    //private String keras_process_address = "C:\\Users\\tencon2010\\AppData\\Local\\conda\\conda\\envs\\tensorflow\\python.exe";
-    private String keras_process_address = "";
+    private String keras_process_address = "C:\\Users\\tencon2010\\AppData\\Local\\conda\\conda\\envs\\tensorflow\\python.exe";
+    //private String keras_process_address = "";
 
     public void setKeras_process_address(String keras_process_address) {
         this.keras_process_address = keras_process_address;
