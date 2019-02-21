@@ -55,9 +55,28 @@ public class FitFunction extends CFBtn {
     }
 
     public void change_dataset(String dataset_name) {
-        if(dataset_name.equals("mnist")) {
+        if      (dataset_name.equals("cifar10")) {
+            //
+        }
+        else if (dataset_name.equals("cifar100")) {
+            //
+        }
+        else if (dataset_name.equals("imdb")) {
+            //
+        }
+        else if (dataset_name.equals("reuters")) {
+            //
+        }
+        else if (dataset_name.equals("mnist")) {
             attr_list[_x].setAttribute_value("x_train");
             attr_list[_y].setAttribute_value("y_train");
+        }
+        else if (dataset_name.equals("fashion_mnist")) {
+            attr_list[_x].setAttribute_value("x_train");
+            attr_list[_y].setAttribute_value("y_train");
+        }
+        else if (dataset_name.equals("boston_housing")) {
+            //
         }
     }
 }

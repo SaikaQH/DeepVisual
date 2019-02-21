@@ -83,7 +83,27 @@ public class DeepVisualWindowController {
         cifar10_dataset_btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                setDatasets("cifar10", "cifar10.load_data()");
+                String pre_processing_code = "" +
+                        "if K.image_data_format() == 'channels_first':\n" +
+                        "    x_train = x_train.reshape(x_train.shape[0], 3, 32, 32)\n" +
+                        "    x_test = x_test.reshape(x_test.shape[0], 3, 32, 32)\n" +
+                        "    input_shape = (3, 32, 32) #front\n" +
+                        "else:\n" +
+                        "    x_train = x_train.reshape(x_train.shape[0], 32, 32, 3)\n" +
+                        "    x_test = x_test.reshape(x_test.shape[0], 32, 32, 3)\n" +
+                        "    input_shape = (32, 32, 3)  #last\n" +
+                        "\n" +
+                        "x_train = x_train.astype('float32')\n" +
+                        "x_test = x_test.astype('float32')\n" +
+                        "x_train /= 255\n" +
+                        "x_test /= 255\n" +
+                        "\n" +
+                        "y_train = to_categorical(y_train, 10)\n" +
+                        "y_test = to_categorical(y_test, 10)";
+
+                setDatasets("cifar10", "cifar10.load_data()\n\n" + pre_processing_code);
+                addCodePaneImportCode("from keras.utils import to_categorical\n");
+                addCodePaneImportCode("from keras import backend as K\n");
                 setSelectedDataset(cifar10_dataset_btn.getLayoutX(), cifar10_dataset_btn.getLayoutY());
             }
         });
@@ -92,7 +112,27 @@ public class DeepVisualWindowController {
         cifar100_dataset_btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                setDatasets("cifar100", "cifar100.load_data(label_mode=\'fine\')");
+                String pre_processing_code = "" +
+                        "if K.image_data_format() == 'channels_first':\n" +
+                        "    x_train = x_train.reshape(x_train.shape[0], 3, 32, 32)\n" +
+                        "    x_test = x_test.reshape(x_test.shape[0], 3, 32, 32)\n" +
+                        "    input_shape = (3, 32, 32) #front\n" +
+                        "else:\n" +
+                        "    x_train = x_train.reshape(x_train.shape[0], 32, 32, 3)\n" +
+                        "    x_test = x_test.reshape(x_test.shape[0], 32, 32, 3)\n" +
+                        "    input_shape = (32, 32, 3)  #last\n" +
+                        "\n" +
+                        "x_train = x_train.astype('float32')\n" +
+                        "x_test = x_test.astype('float32')\n" +
+                        "x_train /= 255\n" +
+                        "x_test /= 255\n" +
+                        "\n" +
+                        "y_train = to_categorical(y_train, 100)\n" +
+                        "y_test = to_categorical(y_test, 100)";
+
+                setDatasets("cifar100", "cifar100.load_data(label_mode=\'fine\')" + pre_processing_code);
+                addCodePaneImportCode("from keras.utils import to_categorical\n");
+                addCodePaneImportCode("from keras import backend as K\n");
                 setSelectedDataset(cifar100_dataset_btn.getLayoutX(), cifar100_dataset_btn.getLayoutY());
             }
         });
@@ -101,7 +141,16 @@ public class DeepVisualWindowController {
         imdb_dataset_btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                setDatasets("imdb", "imdb.load_data(path=\"imdb\", num_words=None, skip_top=0, maxlen=None, seed=113, start_char=1, oov_char=2, index_from=3)");
+                String pre_processing_code = "" +
+                        "max_features = 20000\n" +
+                        "maxlen = 80\n" +
+                        //"(x_train,y_train),(x_test,y_test) = imdb.load_data(num_words= max_features )   # max_features = 20000\n" +
+                        "\n" +
+                        "x_train = sequence .pad_sequences(x_train ,maxlen= maxlen )  # maxlen = 80\n" +
+                        "x_test = sequence .pad_sequences(x_test ,maxlen= maxlen )\n";
+
+                setDatasets("imdb", "imdb.load_data(num_words= max_features )" + pre_processing_code);// "imdb.load_data(path=\"imdb\", num_words=None, skip_top=0, maxlen=None, seed=113, start_char=1, oov_char=2, index_from=3)"
+                addCodePaneImportCode("from keras.preprocessing import sequence\n");
                 setSelectedDataset(imdb_dataset_btn.getLayoutX(), imdb_dataset_btn.getLayoutY());
             }
         });
@@ -110,7 +159,20 @@ public class DeepVisualWindowController {
         reuters_dataset_btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                setDatasets("reuters", "reuters.load_data(path=\"reuters.npz\", num_words=None, skip_top=0, maxlen=None, test_split=0.2, seed=113, start_char=1, oov_char=2, index_from=3)");
+                String pre_processing_code = "" +
+                        "max_features = 10000\n" +
+                        "maxlen = 150\n" +
+                        //"(x_train,y_train),(x_test,y_test) = reuters.load_data(num_words= max_features )   # max_features = 10000\n" +
+                        "\n" +
+                        "x_train = sequence .pad_sequences(x_train ,maxlen= maxlen )  # maxlen = 150\n" +
+                        "x_test = sequence .pad_sequences(x_test ,maxlen= maxlen )   # maxlen = 150\n" +
+                        "\n" +
+                        "y_train = to_categorical(y_train,46)\n" +
+                        "y_test = to_categorical(y_test,46)";
+
+                setDatasets("reuters", "reuters.load_data(num_words=max_features)\n\n" + pre_processing_code); // reuters.load_data(path="reuters.npz", num_words=None, skip_top=0, maxlen=None, test_split=0.2, seed=113, start_char=1, oov_char=2, index_from=3)
+                addCodePaneImportCode("from keras.preprocessing import sequence\n");
+                addCodePaneImportCode("from keras.utils import to_categorical\n");
                 setSelectedDataset(reuters_dataset_btn.getLayoutX(), reuters_dataset_btn.getLayoutY());
             }
         });
@@ -147,7 +209,25 @@ public class DeepVisualWindowController {
         fashion_mnist_dataset_btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                setDatasets("fashion_mnist", "fashion_mnist.load_data()");
+                String pre_processing_code = "if K.image_data_format() == \'channels_first\':\n" +
+                        "    x_train = x_train.reshape(x_train.shape[0], 1, 28, 28)\n" +
+                        "    x_test = x_test.reshape(x_test.shape[0], 1, 28, 28)\n" +
+                        "    input_shape = (1, 28, 28)\n" +
+                        "else:\n" +
+                        "    x_train = x_train.reshape(x_train.shape[0], 28, 28, 1)\n" +
+                        "    x_test = x_test.reshape(x_test.shape[0], 28, 28, 1)\n" +
+                        "    input_shape = (28, 28, 1)\n" +
+                        "\n" +
+                        "x_train = x_train.astype(\'float32\')\n" +
+                        "x_test = x_test.astype(\'float32\')\n" +
+                        "x_train /= 255\n" +
+                        "x_test /= 255\n" +
+                        "\n" +
+                        "y_train = np_utils.to_categorical(y_train, 10)\n" +
+                        "y_test = np_utils.to_categorical(y_test, 10)";
+                setDatasets("fashion_mnist", "fashion_mnist.load_data()" + pre_processing_code);
+                addCodePaneImportCode("from keras.utils import np_utils\n");
+                addCodePaneImportCode("from keras import backend as K\n");
                 setSelectedDataset(fashion_mnist_dataset_btn.getLayoutX(), fashion_mnist_dataset_btn.getLayoutY());
             }
         });
@@ -156,7 +236,17 @@ public class DeepVisualWindowController {
         boston_housing_dataset_btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                setDatasets("boston_housing", "boston_housing.load_data()");
+                String pre_processing_code = "\n" +
+                        "mean = x_train.mean(axis=0)  # 求均值\n" +
+                        "x_train -= mean\n" +
+                        "\n" +
+                        "std = x_train.std(axis=0)  # 求标准差\n" +
+                        "x_train /= std\n" +
+                        "\n" +
+                        "x_test -= mean\n" +
+                        "x_test /= std";
+
+                setDatasets("boston_housing", "boston_housing.load_data()" + pre_processing_code);
                 setSelectedDataset(boston_housing_dataset_btn.getLayoutX(), boston_housing_dataset_btn.getLayoutY());
             }
         });
@@ -208,7 +298,13 @@ public class DeepVisualWindowController {
 
     private NNBuilderButton data_input_btn = null;
     private NNBuilderButton data_output_btn = null;
+    private NNBuilderButton data_embedding_btn = null;
+    private connectLine line_input_embedding = null;
     private void createInputOutputBtn(String dataset_name) {
+        if(line_input_embedding != null) {
+            removeConnectLine(line_input_embedding);
+            line_input_embedding = null;
+        }
         if(data_input_btn != null) {
             removeNNBtn(data_input_btn);
             data_input_btn = null;
@@ -217,8 +313,12 @@ public class DeepVisualWindowController {
             removeNNBtn(data_output_btn);
             data_output_btn = null;
         }
+        if(data_embedding_btn != null) {
+            removeNNBtn(data_embedding_btn);
+            data_output_btn = null;
+        }
 
-        if(dataset_name.equals("mnist")) {
+        if      (dataset_name.equals("cifar10")) {
 
             data_input_btn = createNNBtn("Core.Input", 100, 50);
             data_input_btn.setNN_name("inputLayer");
@@ -231,6 +331,139 @@ public class DeepVisualWindowController {
             data_output_btn.setAttribute("name", "outputLayer");
             data_output_btn.setAttribute("units", "10");
             data_output_btn.setAttribute("activation", "\'softmax\'");
+            data_output_btn.setFlag_no_output(true);
+
+            addNNBtn(data_input_btn);
+            addNNBtn(data_output_btn);
+        }
+        else if (dataset_name.equals("cifar100")) {
+
+            data_input_btn = createNNBtn("Core.Input", 100, 50);
+            data_input_btn.setNN_name("inputLayer");
+            data_input_btn.setAttribute("name", "inputLayer");
+            data_input_btn.setAttribute("shape", "input_shape");
+            data_input_btn.setFlag_no_input(true);
+
+            data_output_btn = createNNBtn("Core.Dense", 100, 150);
+            data_output_btn.setNN_name("outputLayer");
+            data_output_btn.setAttribute("name", "outputLayer");
+            data_output_btn.setAttribute("units", "100");
+            data_output_btn.setAttribute("activation", "\'softmax\'");
+            data_output_btn.setFlag_no_output(true);
+
+            addNNBtn(data_input_btn);
+            addNNBtn(data_output_btn);
+        }
+        else if (dataset_name.equals("imdb")) {
+
+            data_input_btn = createNNBtn("Core.Input", 100, 50);
+            data_input_btn.setNN_name("inputLayer");
+            data_input_btn.setAttribute("name", "inputLayer");
+            data_input_btn.setAttribute("shape", "(maxlen,)");
+            data_input_btn.setFlag_no_input(true);
+
+            data_embedding_btn = createNNBtn("Embedding.Embedding", 100, 150);
+            data_embedding_btn.setNN_name("embeddingLayer");
+            data_embedding_btn.setAttribute("name", "embeddingLayer");
+            data_embedding_btn.setAttribute("input_dim", "max_features");
+            data_embedding_btn.setAttribute("output_dim", "128");
+
+            line_input_embedding = new connectLine(data_input_btn.getSideBtn(data_input_btn.down_btn_index), data_embedding_btn.getSideBtn(data_embedding_btn.up_btn_index));
+
+            data_output_btn = createNNBtn("Core.Dense", 100, 250);
+            data_output_btn.setNN_name("outputLayer");
+            data_output_btn.setAttribute("name", "outputLayer");
+            data_output_btn.setAttribute("units", "1");
+            data_output_btn.setAttribute("activation", "\'sigmoid\'");
+            data_output_btn.setFlag_no_output(true);
+
+            addNNBtn(data_input_btn);
+            addNNBtn(data_embedding_btn);
+            addConnectLine(line_input_embedding);
+            addNNBtn(data_output_btn);
+        }
+        else if (dataset_name.equals("reuters")) {
+
+            data_input_btn = createNNBtn("Core.Input", 100, 50);
+            data_input_btn.setNN_name("inputLayer");
+            data_input_btn.setAttribute("name", "inputLayer");
+            data_input_btn.setAttribute("shape", "(maxlen,)");
+            data_input_btn.setFlag_no_input(true);
+
+            data_embedding_btn = createNNBtn("Embedding.Embedding", 100, 150);
+            data_embedding_btn.setNN_name("embeddingLayer");
+            data_embedding_btn.setAttribute("name", "embeddingLayer");
+            data_embedding_btn.setAttribute("input_dim", "max_features");
+            data_embedding_btn.setAttribute("output_dim", "128");
+
+            line_input_embedding = new connectLine(data_input_btn.getSideBtn(data_input_btn.down_btn_index), data_embedding_btn.getSideBtn(data_embedding_btn.up_btn_index));
+
+            data_output_btn = createNNBtn("Core.Dense", 100, 250);
+            data_output_btn.setNN_name("outputLayer");
+            data_output_btn.setAttribute("name", "outputLayer");
+            data_output_btn.setAttribute("units", "46");
+            data_output_btn.setAttribute("activation", "\'softmax\'");
+            data_output_btn.setFlag_no_output(true);
+
+            addNNBtn(data_input_btn);
+            addNNBtn(data_embedding_btn);
+            addConnectLine(line_input_embedding);
+            addNNBtn(data_output_btn);
+        }
+        else if (dataset_name.equals("mnist")) {
+
+            data_input_btn = createNNBtn("Core.Input", 100, 50);
+            data_input_btn.setNN_name("inputLayer");
+            data_input_btn.setAttribute("name", "inputLayer");
+            data_input_btn.setAttribute("shape", "input_shape");
+            data_input_btn.setFlag_no_input(true);
+
+            data_output_btn = createNNBtn("Core.Dense", 100, 150);
+            data_output_btn.setNN_name("outputLayer");
+            data_output_btn.setAttribute("name", "outputLayer");
+            data_output_btn.setAttribute("units", "10");
+            data_output_btn.setAttribute("activation", "\'softmax\'");
+            data_output_btn.setFlag_no_output(true);
+            //for(NNAttribute a:data_output_btn.getAttr_list()) {
+            //    System.out.println(a.getAttribute_name() + ": " + a.getAttribute_value());
+            //}
+
+            addNNBtn(data_input_btn);
+            addNNBtn(data_output_btn);
+        }
+        else if (dataset_name.equals("fashion_mnist")) {
+
+            data_input_btn = createNNBtn("Core.Input", 100, 50);
+            data_input_btn.setNN_name("inputLayer");
+            data_input_btn.setAttribute("name", "inputLayer");
+            data_input_btn.setAttribute("shape", "input_shape");
+            data_input_btn.setFlag_no_input(true);
+
+            data_output_btn = createNNBtn("Core.Dense", 100, 150);
+            data_output_btn.setNN_name("outputLayer");
+            data_output_btn.setAttribute("name", "outputLayer");
+            data_output_btn.setAttribute("units", "10");
+            data_output_btn.setAttribute("activation", "\'softmax\'");
+            data_output_btn.setFlag_no_output(true);
+            //for(NNAttribute a:data_output_btn.getAttr_list()) {
+            //    System.out.println(a.getAttribute_name() + ": " + a.getAttribute_value());
+            //}
+
+            addNNBtn(data_input_btn);
+            addNNBtn(data_output_btn);
+        }
+        else if (dataset_name.equals("boston_housing")) {
+
+            data_input_btn = createNNBtn("Core.Input", 100, 50);
+            data_input_btn.setNN_name("inputLayer");
+            data_input_btn.setAttribute("name", "inputLayer");
+            data_input_btn.setAttribute("shape", "(13,)");
+            data_input_btn.setFlag_no_input(true);
+
+            data_output_btn = createNNBtn("Core.Dense", 100, 150);
+            data_output_btn.setNN_name("outputLayer");
+            data_output_btn.setAttribute("name", "outputLayer");
+            data_output_btn.setAttribute("units", "1");
             data_output_btn.setFlag_no_output(true);
             //for(NNAttribute a:data_output_btn.getAttr_list()) {
             //    System.out.println(a.getAttribute_name() + ": " + a.getAttribute_value());
@@ -688,10 +921,12 @@ public class DeepVisualWindowController {
     }
 
     public void removeNNBtn(NNBuilderButton NNBtn) {
+        boolean has_nnbtn = false;
         NNDrawerPane.getChildren().removeAll(NNBtn.getSideBtnList());
-        NNDrawerPane.getChildren().remove(NNBtn);
+        has_nnbtn = NNDrawerPane.getChildren().remove(NNBtn);
 
-        removeNNBtnFromList(NNBtn);
+        if(has_nnbtn)
+            removeNNBtnFromList(NNBtn);
         removeNNBtnFromCode(NNBtn);
     }
 
@@ -747,11 +982,13 @@ public class DeepVisualWindowController {
     }
 
     public void removeConnectLine(connectLine c_line) {
+        boolean has_cline = false;
         NNDrawerPane.getChildren().remove(c_line.getCLineArrow());
         NNDrawerPane.getChildren().remove(c_line.getCLineDeleteBtn());
-        NNDrawerPane.getChildren().remove(c_line);
+        has_cline = NNDrawerPane.getChildren().remove(c_line);
 
-        removeCLineFromCode(c_line);
+        if(has_cline)
+            removeCLineFromCode(c_line);
     }
 
     public void setDragCLineStart(double s_x, double s_y) {  // 用于设置影子连线的起点

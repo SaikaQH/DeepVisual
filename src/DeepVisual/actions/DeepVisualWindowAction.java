@@ -33,7 +33,7 @@ public class DeepVisualWindowAction extends AnAction {
         String code = psifile.getText();
         System.out.println(code);
 */
-        DeepVisualWindow deepVisualWindow = new DeepVisualWindowComponent(project, event).getNNDrawerWindowPanel();
+        DeepVisualWindow deepVisualWindow = new DeepVisualWindowComponent(project, event).getDeepVisualWindowPanel();
         ToolWindow toolWindow = getToolWindow(project);
         toolWindow.activate(deepVisualWindow);
     }

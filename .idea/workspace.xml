@@ -13,7 +13,7 @@
     <session id="-1018871462">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="32" />
+          <entry key="project.closed" value="35" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
@@ -27,20 +27,22 @@
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.36" value="1" />
-          <entry key="project.open.time.37" value="2" />
+          <entry key="project.open.time.37" value="3" />
           <entry key="project.open.time.39" value="3" />
           <entry key="project.open.time.40" value="2" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.49" value="2" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.88" value="1" />
-          <entry key="project.opened" value="33" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -50,10 +52,10 @@
           <entry key="form" value="4" />
           <entry key="fxml" value="53" />
           <entry key="iml" value="1" />
-          <entry key="java" value="827" />
+          <entry key="java" value="855" />
           <entry key="style" value="4" />
           <entry key="svg" value="1" />
-          <entry key="xml" value="24" />
+          <entry key="xml" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -62,9 +64,9 @@
           <entry key="CSS" value="10" />
           <entry key="GUI_DESIGNER_FORM" value="4" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="827" />
+          <entry key="JAVA" value="855" />
           <entry key="SVG" value="1" />
-          <entry key="XML" value="77" />
+          <entry key="XML" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -74,18 +76,18 @@
           <entry key="css" value="3530" />
           <entry key="dummy" value="214" />
           <entry key="fxml" value="357" />
-          <entry key="java" value="126135" />
+          <entry key="java" value="127759" />
           <entry key="style" value="26" />
-          <entry key="xml" value="1475" />
+          <entry key="xml" value="1499" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="6" />
           <entry key="CSS" value="3556" />
-          <entry key="JAVA" value="126135" />
+          <entry key="JAVA" value="127759" />
           <entry key="PLAIN_TEXT" value="214" />
-          <entry key="XML" value="1832" />
+          <entry key="XML" value="1856" />
         </counts>
       </usages-collector>
     </session>
@@ -98,32 +100,74 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/DeepVisualWindowController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="1175" column="39" selection-start-line="1175" selection-start-column="39" selection-end-line="1175" selection-end-column="39" />
+            <state relative-caret-position="255">
+              <caret line="172" column="39" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#44479#44480#0" expanded="true" />
-                <element signature="e#44505#44506#0" expanded="true" />
+                <element signature="e#27514#27515#0" expanded="true" />
+                <element signature="e#27556#27557#0" expanded="true" />
+                <element signature="e#27710#27711#0" expanded="true" />
+                <element signature="e#27765#27766#0" expanded="true" />
+                <element signature="e#50663#50664#0" expanded="true" />
+                <element signature="e#50728#50729#0" expanded="true" />
+                <element signature="e#50887#50888#0" expanded="true" />
+                <element signature="e#50952#50953#0" expanded="true" />
+                <element signature="e#51112#51113#0" expanded="true" />
+                <element signature="e#51177#51178#0" expanded="true" />
+                <element signature="e#51337#51338#0" expanded="true" />
+                <element signature="e#51402#51403#0" expanded="true" />
+                <element signature="e#51562#51563#0" expanded="true" />
+                <element signature="e#51640#51641#0" expanded="true" />
+                <element signature="e#51801#51802#0" expanded="true" />
+                <element signature="e#51879#51880#0" expanded="true" />
+                <element signature="e#52035#52036#0" expanded="true" />
+                <element signature="e#52109#52110#0" expanded="true" />
+                <element signature="e#52266#52267#0" expanded="true" />
+                <element signature="e#52340#52341#0" expanded="true" />
+                <element signature="e#44654#44655#0" expanded="true" />
+                <element signature="e#44708#44709#0" expanded="true" />
+                <element signature="e#45027#45028#0" expanded="true" />
+                <element signature="e#45075#45076#0" expanded="true" />
+                <element signature="e#54974#54975#0" expanded="true" />
+                <element signature="e#55021#55022#0" expanded="true" />
+                <element signature="e#55180#55181#0" expanded="true" />
+                <element signature="e#55222#55223#0" expanded="true" />
+                <element signature="e#55378#55379#0" expanded="true" />
+                <element signature="e#55433#55434#0" expanded="true" />
+                <element signature="e#56115#56116#0" expanded="true" />
+                <element signature="e#56157#56158#0" expanded="true" />
+                <element signature="e#56311#56312#0" expanded="true" />
+                <element signature="e#56358#56359#0" expanded="true" />
+                <element signature="e#56512#56513#0" expanded="true" />
+                <element signature="e#56567#56568#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/DeepVisualWindow.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="4624">
-              <caret line="272" selection-start-line="272" selection-end-line="272" />
+        <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/sideButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="138" column="53" selection-start-line="138" selection-start-column="39" selection-end-line="138" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/NNBuilderButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/ImportCodeManagerWithProcess.java">
+        <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CodePane/CodePaneManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="110" column="35" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
+            <state relative-caret-position="451">
+              <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,9 +188,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Cropping</find>
-      <find>2D</find>
-      <find>Layer</find>
       <find>ConvolutionalNN</find>
       <find>ConvolutionalNN(</find>
       <find>CodePaneManager</find>
@@ -174,12 +215,14 @@
       <find>changeNNBtnName</find>
       <find>name</find>
       <find>setAttribute</find>
+      <find>flag_no_input</find>
+      <find>builder</find>
+      <find>setFlag_no_input</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/NNDrawer/UInterface/UIactions/LayerPane/ConvolutionalLayer/ZeroPadding1DLayer.java" />
         <option value="$PROJECT_DIR$/src/NNDrawer/UInterface/UIactions/LayerPane/ConvolutionalLayer/ZeroPadding2DLayer.java" />
         <option value="$PROJECT_DIR$/src/NNDrawer/UInterface/UIactions/LayerPane/ConvolutionalLayer/ZeroPadding3DLayer.java" />
         <option value="$PROJECT_DIR$/src/NNDrawer/UInterface/UIactions/LayerPane/ConvolutionalLayer/ConvolutionalLayerButton.java" />
@@ -219,17 +262,18 @@
         <option value="$PROJECT_DIR$/src/NNDrawer/UInterface/UIactions/CompileAndFitPane/Attribute/CFAttribute.java" />
         <option value="$PROJECT_DIR$/src/NNDrawer/UInterface/NNDrawerWindowController.java" />
         <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/stylesheets.css" />
-        <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/NNBuilderButton.java" />
-        <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/sideButton.java" />
-        <option value="$PROJECT_DIR$/src/DeepVisual/project/DeepVisualWindowComponent.java" />
         <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/DeepVisualWindow.fxml" />
-        <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/CompileFunction.java" />
         <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/PoolingNN/MaxPooling2DNN.java" />
-        <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/FitFunction.java" />
-        <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CodePane/CodePaneManager.java" />
+        <option value="$PROJECT_DIR$/src/DeepVisual/actions/DeepVisualWindowAction.java" />
+        <option value="$PROJECT_DIR$/src/DeepVisual/project/DeepVisualWindowComponent.java" />
         <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
-        <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/DeepVisualWindowController.java" />
         <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/ImportCodeManagerWithProcess.java" />
+        <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/sideButton.java" />
+        <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/CompileFunction.java" />
+        <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/FitFunction.java" />
+        <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/NNBuilderButton.java" />
+        <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/DeepVisualWindowController.java" />
+        <option value="$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CodePane/CodePaneManager.java" />
       </list>
     </option>
   </component>
@@ -246,8 +290,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="758" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="696" />
     <option name="width" value="1167" />
     <option name="height" value="1083" />
   </component>
@@ -256,6 +300,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="test_num_2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="test_num_2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="test_num_2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="test_num_2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="test_num_2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="test_num_2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="mainWindowForTest" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -344,7 +410,7 @@
               <item name="DeepVisual" type="462c0819:PsiDirectoryNode" />
               <item name="UInterface" type="462c0819:PsiDirectoryNode" />
               <item name="UIactions" type="462c0819:PsiDirectoryNode" />
-              <item name="AttributePane" type="462c0819:PsiDirectoryNode" />
+              <item name="CodePane" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="test_num_2" type="b2602c69:ProjectViewProjectNode" />
@@ -354,6 +420,7 @@
               <item name="UInterface" type="462c0819:PsiDirectoryNode" />
               <item name="UIactions" type="462c0819:PsiDirectoryNode" />
               <item name="CodePane" type="462c0819:PsiDirectoryNode" />
+              <item name="CodePaneManager.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="test_num_2" type="b2602c69:ProjectViewProjectNode" />
@@ -371,33 +438,21 @@
               <item name="DeepVisual" type="462c0819:PsiDirectoryNode" />
               <item name="UInterface" type="462c0819:PsiDirectoryNode" />
               <item name="UIactions" type="462c0819:PsiDirectoryNode" />
+              <item name="CompileAndFitPane" type="462c0819:PsiDirectoryNode" />
+              <item name="Attribute" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test_num_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_num_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="DeepVisual" type="462c0819:PsiDirectoryNode" />
+              <item name="UInterface" type="462c0819:PsiDirectoryNode" />
+              <item name="UIactions" type="462c0819:PsiDirectoryNode" />
               <item name="NNBuilderPane" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="test_num_2" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="test_num_2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="test_num_2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="test_num_2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="test_num_2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="test_num_2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="test_num_2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mainWindowForTest" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -510,7 +565,8 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550479044196" />
+    <property name="SearchEverywhereHistoryKey" value="builder&#9;FILE&#9;file://G:/WorkingSpace/IntelliJ/plugin_project/test_num_2/src/DeepVisual/UInterface/UIactions/NNBuilderPane" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550745657409" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/test_num_2 ver.2018.12.28/src/NNDrawer/UInterface/NNDrawerWindowController.java" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15559895" />
@@ -591,10 +647,10 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" weight="0.32959402" />
-      <window_info content_ui="combo" x="1292" y="217" width="251" height="606" id="Project" order="6" visible="true" weight="0.23557693" />
+      <window_info content_ui="combo" x="1292" y="217" width="251" height="606" id="Project" order="6" weight="0.23824786" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32831" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49782136" visible="true" weight="0.2540366" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49782136" weight="0.2540366" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -652,48 +708,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/LayerPane/RecurrentLayer/SimpleRNNCellLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/LayerPane/EmbeddingLayer/EmbeddingLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/LayerPane/EmbeddingLayer/EmbeddingLayerButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="54" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/LayerPane/NormalizationLayer/NormalizationLayerButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="58" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/LayerPane/NormalizationLayer/BatchNormalizationLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/LayerPane/AdvancedActivationsLayer/AdvancedActivationsLayerButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="29" column="64" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/LayerPane/NoiseLayer/NoiseLayerButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
@@ -705,27 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="104" column="12" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/connectLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="169" column="11" lean-forward="true" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
-          <folding>
-            <element signature="e#4041#4042#0" expanded="true" />
-            <element signature="e#4086#4087#0" expanded="true" />
-            <element signature="e#4933#4934#0" expanded="true" />
-            <element signature="e#4992#4993#0" expanded="true" />
-            <element signature="e#5141#5142#0" expanded="true" />
-            <element signature="e#5201#5202#0" expanded="true" />
-            <element signature="e#5351#5352#0" expanded="true" />
-            <element signature="e#5410#5411#0" expanded="true" />
-            <element signature="e#5559#5560#0" expanded="true" />
-            <element signature="e#5619#5620#0" expanded="true" />
-            <element signature="e#5775#5776#0" expanded="true" />
-            <element signature="e#5820#5821#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -850,13 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/DeepVisualWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/CFBtn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -887,13 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/actions/DeepVisualWindowAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/PyCharm Community Edition 2018.2.4/lib/platform-api.jar!/com/intellij/openapi/wm/ToolWindowManager.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -901,34 +880,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/sideButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="133" column="67" selection-start-line="133" selection-start-column="67" selection-end-line="133" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/project/DeepVisualWindowComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/Attribute/CFAttribute.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="90" column="76" selection-start-line="90" selection-start-column="76" selection-end-line="90" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/Attribute/Losses.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -946,20 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/FitFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="57" column="42" lean-forward="true" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/CompileFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/AttributePane/Activations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -974,58 +915,189 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CodePane/CodePaneManager.java">
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/DeepVisualWindow.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="4624">
+          <caret line="272" selection-start-line="272" selection-end-line="272" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/project/DeepVisualWindowComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="336" column="40" selection-start-line="336" selection-start-column="40" selection-end-line="336" selection-end-column="40" />
+        <state relative-caret-position="459">
+          <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#17573#17574#0" expanded="true" />
-            <element signature="e#17629#17630#0" expanded="true" />
-            <element signature="e#17665#17666#0" expanded="true" />
-            <element signature="e#17741#17742#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/NNBuilderButton.java">
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/actions/DeepVisualWindowAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="296" column="16" selection-start-line="296" selection-start-column="16" selection-end-line="296" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/DeepVisualWindow.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="4624">
-          <caret line="272" selection-start-line="272" selection-end-line="272" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/DeepVisualWindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="1175" column="39" selection-start-line="1175" selection-start-column="39" selection-end-line="1175" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#44479#44480#0" expanded="true" />
-            <element signature="e#44505#44506#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="544">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/ImportCodeManagerWithProcess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="110" column="35" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
+        <state relative-caret-position="281">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/stage/FileChooser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="347" column="16" selection-start-line="347" selection-start-column="16" selection-end-line="347" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/DeepVisualWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/connectLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1628">
+          <caret line="169" column="11" lean-forward="true" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/AttributePane/NNChoiceList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/Attribute/Optimizers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/EmbeddingNN/EmbeddingNN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/EmbeddingNN/EmbeddingLayerNN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/Attribute/Losses.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/CompileFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CompileAndFitPane/FitFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="66" column="45" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="260" column="12" selection-start-line="260" selection-start-column="12" selection-end-line="260" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/sideButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="138" column="53" selection-start-line="138" selection-start-column="39" selection-end-line="138" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/DeepVisualWindowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="172" column="39" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#27514#27515#0" expanded="true" />
+            <element signature="e#27556#27557#0" expanded="true" />
+            <element signature="e#27710#27711#0" expanded="true" />
+            <element signature="e#27765#27766#0" expanded="true" />
+            <element signature="e#50663#50664#0" expanded="true" />
+            <element signature="e#50728#50729#0" expanded="true" />
+            <element signature="e#50887#50888#0" expanded="true" />
+            <element signature="e#50952#50953#0" expanded="true" />
+            <element signature="e#51112#51113#0" expanded="true" />
+            <element signature="e#51177#51178#0" expanded="true" />
+            <element signature="e#51337#51338#0" expanded="true" />
+            <element signature="e#51402#51403#0" expanded="true" />
+            <element signature="e#51562#51563#0" expanded="true" />
+            <element signature="e#51640#51641#0" expanded="true" />
+            <element signature="e#51801#51802#0" expanded="true" />
+            <element signature="e#51879#51880#0" expanded="true" />
+            <element signature="e#52035#52036#0" expanded="true" />
+            <element signature="e#52109#52110#0" expanded="true" />
+            <element signature="e#52266#52267#0" expanded="true" />
+            <element signature="e#52340#52341#0" expanded="true" />
+            <element signature="e#44654#44655#0" expanded="true" />
+            <element signature="e#44708#44709#0" expanded="true" />
+            <element signature="e#45027#45028#0" expanded="true" />
+            <element signature="e#45075#45076#0" expanded="true" />
+            <element signature="e#54974#54975#0" expanded="true" />
+            <element signature="e#55021#55022#0" expanded="true" />
+            <element signature="e#55180#55181#0" expanded="true" />
+            <element signature="e#55222#55223#0" expanded="true" />
+            <element signature="e#55378#55379#0" expanded="true" />
+            <element signature="e#55433#55434#0" expanded="true" />
+            <element signature="e#56115#56116#0" expanded="true" />
+            <element signature="e#56157#56158#0" expanded="true" />
+            <element signature="e#56311#56312#0" expanded="true" />
+            <element signature="e#56358#56359#0" expanded="true" />
+            <element signature="e#56512#56513#0" expanded="true" />
+            <element signature="e#56567#56568#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/NNBuilderPane/NNBuilderButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepVisual/UInterface/UIactions/CodePane/CodePaneManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

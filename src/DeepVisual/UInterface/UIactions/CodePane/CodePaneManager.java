@@ -96,7 +96,7 @@ public class CodePaneManager {
     }
 
     public void addImportCode(String import_code) {
-        import_model_node.code_str += import_code;
+        import_datasets_node.code_str += import_code;
         writeCode();
     }
 
@@ -332,7 +332,19 @@ public class CodePaneManager {
             else code_str += layer_attr[i].getAttribute_name() + "=" + layer_attr[i].getAttribute_value();
             not_first_attr = true;
         }
-        code_str += ")\n";
+        code_str += ")";
+
+        if(targetLayer.nodeBtn.getIn_source_num() > 0) {
+            code_str += "(";
+            NNBuilderButton[] in_list = targetLayer.nodeBtn.getIn_source_list();
+            for(int i = 0; i < targetLayer.nodeBtn.getIn_source_num(); i ++) {
+                if(in_list == null) System.out.println("i = null");
+                code_str += in_list[i].getNN_name();
+            }
+            code_str += ")";
+        }
+
+        code_str += "\n";
 
         targetLayer.code_str = code_str;
 

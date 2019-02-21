@@ -51,10 +51,10 @@ public class NNBuilderButton extends Button {
     protected MenuItem clear_btn;
     protected final double cmenu_width = 150.0;
 
-    protected sideButton up_btn;    protected final int up_btn_index = 0;
-    protected sideButton down_btn;  protected final int down_btn_index = 1;
-    protected sideButton left_btn;  protected final int left_btn_index = 2;
-    protected sideButton right_btn; protected final int right_btn_index = 3;
+    protected sideButton up_btn;    public final int up_btn_index = 0;
+    protected sideButton down_btn;  public final int down_btn_index = 1;
+    protected sideButton left_btn;  public final int left_btn_index = 2;
+    protected sideButton right_btn; public final int right_btn_index = 3;
 
     protected String NN_type;
 
@@ -281,6 +281,7 @@ public class NNBuilderButton extends Button {
     protected NNBuilderButton in_source_list[];
     protected int out_target_num;  // 出的部分没有入的部分重要，所有不需要记录有哪些节点
 
+    protected String input_name = "";
     protected boolean flag_no_input = false;
     protected boolean flag_no_output = false;
 
@@ -327,8 +328,8 @@ public class NNBuilderButton extends Button {
         in_source_list[in_source_num] = in_source;
         in_source_num ++;
 
-        /*
-        for(int i = 0; i < in_source_num; i ++) {
+
+        /*for(int i = 0; i < in_source_num; i ++) {
             System.out.println(in_source_list[i].NN_name + ", " + in_source_list[i].getNN_id());
         }*/
     }
@@ -409,6 +410,14 @@ public class NNBuilderButton extends Button {
         }
         System.out.println("");
     }*/
+
+    public void setInput_name(String input_name) {
+        this.input_name = input_name;
+    }
+
+    public String getInput_name() {
+        return this.input_name;
+    }
 
     public void setFlag_no_input(boolean flag) {
         this.flag_no_input = flag;

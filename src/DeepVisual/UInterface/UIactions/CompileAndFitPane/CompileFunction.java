@@ -42,9 +42,38 @@ public class CompileFunction extends CFBtn{
     }
 
     public void change_dataset(String dataset_name) {
-        if(dataset_name.equals("mnist")) {
+        if      (dataset_name.equals("cifar10")) {
+            attr_list[_loss].setAttribute_value("\'categorical_crossentropy\'");
+            attr_list[_optimizer].setAttribute_value("\'Adam\'");
+            attr_list[_metrics].setAttribute_value("[\'accuracy\']");
+        }
+        else if (dataset_name.equals("cifar100")) {
+            attr_list[_loss].setAttribute_value("\'categorical_crossentropy\'");
+            attr_list[_optimizer].setAttribute_value("\'Adam\'");
+            attr_list[_metrics].setAttribute_value("[\'accuracy\']");
+        }
+        else if (dataset_name.equals("imdb")) {
+            attr_list[_loss].setAttribute_value("\'binary_crossentropy\'");
+            attr_list[_optimizer].setAttribute_value("\'Adam\'");
+            attr_list[_metrics].setAttribute_value("[\'accuracy\']");
+        }
+        else if (dataset_name.equals("reuters")) {
+            attr_list[_loss].setAttribute_value("\'categorical_crossentropy\'");
+            attr_list[_optimizer].setAttribute_value("\'Adam\'");
+            attr_list[_metrics].setAttribute_value("[\'accuracy\']");
+        }
+        else if (dataset_name.equals("mnist")) {
             attr_list[_loss].setAttribute_value("\'categorical_crossentropy\'");
             attr_list[_metrics].setAttribute_value("[\'accuracy\']");
+        }
+        else if (dataset_name.equals("fashion_mnist")) {
+            attr_list[_loss].setAttribute_value("\'categorical_crossentropy\'");
+            attr_list[_metrics].setAttribute_value("[\'accuracy\']");
+        }
+        else if (dataset_name.equals("boston_housing")) {
+            attr_list[_loss].setAttribute_value("\'mean_squared_error\'");
+            attr_list[_optimizer].setAttribute_value("\'Adam\'");
+            attr_list[_metrics].setAttribute_value("[\'mae\']");
         }
     }
 }

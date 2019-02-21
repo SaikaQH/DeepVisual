@@ -31,11 +31,12 @@ public class DeepVisualWindowComponent implements ProjectComponent {
         ToolWindowManager toolWindowManager = ToolWindowManager.getInstance(this._project);
         ToolWindow toolWindow = toolWindowManager.registerToolWindow(DeepVisualWindowComponent.ID_TOOL_WINDOW, false, ToolWindowAnchor.RIGHT);
         //toolWindowManager.setMaximized(toolWindow, true);
-        final Content content = ContentFactory.SERVICE.getInstance().createContent(getNNDrawerWindowPanel(), "", false);
+        final Content content = ContentFactory.SERVICE.getInstance().createContent(getDeepVisualWindowPanel(), "", false);
+        content.setCloseable(false);
         toolWindow.getContentManager().addContent(content);
     }
 
-    public DeepVisualWindow getNNDrawerWindowPanel() {
+    public DeepVisualWindow getDeepVisualWindowPanel() {
         return this._DeepVisualWindow;
     }
 }
